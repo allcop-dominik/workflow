@@ -8,8 +8,7 @@ const AvatarStepNode = memo(({ id, data }: NodeProps) => {
   const { updateNodeData } = useWorkflowStore();
 
   const nodeData = data as WorkflowNode;
-  const selectedCategory = mockVideoLibrary.find(cat => cat.id === nodeData.category);
-  const selectedVideo = selectedCategory?.videos.find(video => video.id === nodeData.videoId);
+  const selectedCategory = mockVideoLibrary.find(cat => cat.id === nodeData.category);  
 
   const handleCategoryChange = (categoryId: string) => {
     updateNodeData(id, {
