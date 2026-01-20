@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* Force proper text colors for form elements */
+input,
+select,
+textarea {
+  color: #1f2937;
+  /* gray-800 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+  /* gray-400 */
+}
+
+/* Handle styles - small handle for correct connection point, padding for large interaction area */
+.react-flow__handle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: all !important;
+  box-sizing: content-box !important;
+}
+
+.react-flow__handle::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #3b82f6;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  transition: all 0.2s;
+}
+
+.react-flow__handle:hover::after {
+  background: #2563eb;
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Purple handles for branch nodes */
+.react-flow__node-branch .react-flow__handle::after {
+  background: #a855f7;
+}
+
+.react-flow__node-branch .react-flow__handle:hover::after {
+  background: #9333ea;
+}
+
+/* Green handles for start node */
+.react-flow__node-start .react-flow__handle::after {
+  background: #16a34a;
+}
+
+.react-flow__node-start .react-flow__handle:hover::after {
+  background: #15803d;
+}
+
+/* Red handles for end node */
+.react-flow__node-end .react-flow__handle::after {
+  background: #dc2626;
+}
+
+.react-flow__node-end .react-flow__handle:hover::after {
+  background: #b91c1c;
+}
