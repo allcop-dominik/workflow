@@ -21,7 +21,6 @@ import EndNode from './EndNode';
 import CustomEdge from './CustomEdge';
 import GuardrailSidebar from './GuardrailSidebar';
 import ExportButton from './ExportButton';
-import StoreDebugger from './StoreDebugger';
 
 const nodeTypes = {
   start: StartNode,
